@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Builder</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <i class="fas fa-briefcase"></i>
+        <h1>E-Portfolio Builder</h1>
+          <a href="landing-page.html" class="btn btn-secondary">
+            <i class="fas fa-chart-line"></i> Dashboard
+          </a>
+      </div>
+      <div class="actions">
+        <button class="btn btn-icon"><i class="fas fa-undo"></i> Undo</button>
+        <button class="btn btn-icon"><i class="fas fa-redo"></i> Redo</button>
+        <button class="btn btn-primary"><i class="fas fa-file-export"></i> Export PDF</button>
+        <div class="avatar">
+          <span>User</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="sidebar">
+        <h2>Sections</h2>
+        <ul class="sections-list">
+          <li class="section-item active" data-section="personal">
+            <i class="fas fa-user"></i>
+            <span>Personal</span>
+          </li>
+          <li class="section-item" data-section="education">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Education</span>
+          </li>
+          <li class="section-item" data-section="skills">
+            <i class="fas fa-code"></i>
+            <span>Skills</span>
+          </li>
+          <li class="section-item" data-section="achievements">
+            <i class="fas fa-trophy"></i>
+            <span>Achievements</span>
+          </li>
+          <li class="section-item" data-section="experience">
+            <i class="fas fa-briefcase"></i>
+            <span>Experience</span>
+          </li>
+          <li class="section-item" data-section="projects">
+            <i class="fas fa-folder"></i>
+            <span>Projects</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="editor">
+        <div class="editor-section" id="personal-section">
+          <div class="section-header">
+            <h2>Personal Information</h2>
+            <button class="btn btn-add"><i class="fas fa-plus"></i> Add Info</button>
+          </div>
+          <div class="form-content">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" placeholder="Name" value="Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Email" value="emman">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" placeholder="Phone" value="+123 567 890">
+            </div>
+            <div class="form-group">
+              <label for="location">Location</label>
+              <input type="text" id="location" placeholder="Location" value="New York, USA">
+            </div>
+          </div>
+        </div>
+        
+        <div class="editor-section hidden" id="education-section">
+          <div class="section-header">
+            <h2>Education</h2>
+            <button class="btn btn-add"><i class="fas fa-plus"></i> Add Education</button>
+          </div>
+          <div class="form-content">
+            <div class="form-group">
+              <label for="institution">Institution</label>
+              <input type="text" id="institution" placeholder="Institution name">
+            </div>
+            <div class="form-group">
+              <label for="degree">Degree</label>
+              <input type="text" id="degree" placeholder="Your degree">
+            </div>
+            <div class="form-group">
+              <label for="edu-dates">Dates</label>
+              <input type="text" id="edu-dates" placeholder="2018 - 2022">
+            </div>
+          </div>
+        </div>
+        
+        <div class="editor-section hidden" id="skills-section">
+          <div class="section-header">
+            <h2>Skills</h2>
+            <button class="btn btn-add"><i class="fas fa-plus"></i> Add Skill</button>
+          </div>
+          <div class="form-content">
+            <div class="form-group">
+              <label for="skill-name">Skill Name</label>
+              <input type="text" id="skill-name" placeholder="e.g., JavaScript">
+            </div>
+            <div class="form-group">
+              <label for="proficiency">Proficiency</label>
+              <select id="proficiency">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+                <option value="expert">Expert</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div class="editor-section hidden" id="achievements-section">
+          <div class="section-header">
+            <h2>Achievements</h2>
+            <button class="btn btn-add"><i class="fas fa-plus"></i> Add Achievement</button>
+          </div>
+          <div class="form-content">
+            <div class="form-group">
+              <label for="achievement-title">Title</label>
+              <input type="text" id="achievement-title" placeholder="Achievement title">
+            </div>
+            <div class="form-group">
+              <label for="achievement-desc">Description</label>
+              <textarea id="achievement-desc" placeholder="Brief description"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="achievement-date">Date</label>
+              <input type="text" id="achievement-date" placeholder="2022">
+            </div>
+          </div>
+        </div>
+        
+        <div class="editor-section hidden" id="experience-section">
+          <div class="section-header">
+            <h2>Experience</h2>
+            <button class="btn btn-add"><i class="fas fa-plus"></i> Add Experience</button>
+          </div>
+          <div class="form-content">
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" placeholder="Company name">
+            </div>
+            <div class="form-group">
+              <label for="job-title">Job Title</label>
+              <input type="text" id="job-title" placeholder="Your title">
+            </div>
+            <div class="form-group">
+              <label for="job-dates">Dates</label>
+              <input type="text" id="job-dates" placeholder="Jan 2020 - Present">
+            </div>
+            <div class="form-group">
+              <label for="job-desc">Description</label>
+              <textarea id="job-desc" placeholder="Job description"></textarea>
+            </div>
+          </div>
+        </div>
+        
+        <div class="editor-section hidden" id="projects-section">
+          <div class="section-header">
+            <h2>Projects</h2>
+            <button class="btn btn-add"><i class="fas fa-plus"></i> Add Project</button>
+          </div>
+          <div class="form-content">
+            <div class="form-group">
+              <label for="project-title">Project Title</label>
+              <input type="text" id="project-title" placeholder="Project name">
+            </div>
+            <div class="form-group">
+              <label for="project-desc">Description</label>
+              <textarea id="project-desc" placeholder="Project description"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="project-link">Link</label>
+              <input type="url" id="project-link" placeholder="https://...">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="preview">
+        <h2>Resume Preview</h2>
+        <div class="preview-container">
+          <div class="preview-placeholder">Preview</div>
+        </div>
+        <button class="btn btn-full-width">
+          <i class="fas fa-eye"></i> View Full Preview
+        </button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="copyright">
+        <p>&copy; 2025 E-Portfolio Builder. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#" class="footer-link"><i class="fas fa-question-circle"></i> Help</a>
+        <a href="#" class="footer-link"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all section items in the sidebar
+      const sectionItems = document.querySelectorAll('.section-item');
+      
+      // Add click event listener to each section item
+      sectionItems.forEach(item => {
+        item.addEventListener('click', function() {
+          // Remove 'active' class from all section items
+          sectionItems.forEach(i => i.classList.remove('active'));
+          
+          // Add 'active' class to the clicked section item
+          this.classList.add('active');
+          
+          // Get the section data attribute
+          const section = this.getAttribute('data-section');
+          
+          // Hide all editor sections
+          const editorSections = document.querySelectorAll('.editor-section');
+          editorSections.forEach(section => section.classList.add('hidden'));
+          
+          // Show the selected editor section
+          const selectedSection = document.getElementById(`${section}-section`);
+          if (selectedSection) {
+            selectedSection.classList.remove('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
