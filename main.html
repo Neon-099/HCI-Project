@@ -3,249 +3,356 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Builder</title>
-  <link rel="stylesheet" href="main.css">
+  <title>E-Resume Builder</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/copy-main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <div class="container">
-    <header class="header">
-      <div class="logo">
-        <i class="fas fa-briefcase"></i>
-        <h1>E-Portfolio Builder</h1>
-          <a href="landing-page.html" class="btn btn-secondary">
-            <i class="fas fa-chart-line"></i> Dashboard
-          </a>
-      </div>
-      <div class="actions">
-        <button class="btn btn-icon"><i class="fas fa-undo"></i> Undo</button>
-        <button class="btn btn-icon"><i class="fas fa-redo"></i> Redo</button>
-        <button class="btn btn-primary"><i class="fas fa-file-export"></i> Export PDF</button>
-        <div class="avatar">
-          <span>User</span>
-        </div>
-      </div>
-    </header>
+      <!-- Header -->
+      <header class="header">
+          <div class="logo">
+              <h1>E-Portfolio Builder</h1>
+          </div>
+          <div class="actions">
+              <button class="btn btn-icon" id="btn-undo">
+                  <i class="fas fa-undo"></i>
+                  <span>Undo</span>
+              </button>
+              <button class="btn btn-icon" id="btn-redo">
+                  <i class="fas fa-redo"></i>
+                  <span>Redo</span>
+              </button>
+              <button class="btn btn-primary" id="btn-export">
+                  <i class="fas fa-file-export"></i>
+                  <span>Export PDF</span>
+              </button>
+              <div class="avatar">
+                  <span>User</span>
+              </div>
+          </div>
+      </header>
 
-    <main class="main-content">
-      <div class="sidebar">
-        <h2>Sections</h2>
-        <ul class="sections-list">
-          <li class="section-item active" data-section="personal">
-            <i class="fas fa-user"></i>
-            <span>Personal</span>
-          </li>
-          <li class="section-item" data-section="education">
-            <i class="fas fa-graduation-cap"></i>
-            <span>Education</span>
-          </li>
-          <li class="section-item" data-section="skills">
-            <i class="fas fa-code"></i>
-            <span>Skills</span>
-          </li>
-          <li class="section-item" data-section="achievements">
-            <i class="fas fa-trophy"></i>
-            <span>Achievements</span>
-          </li>
-          <li class="section-item" data-section="experience">
-            <i class="fas fa-briefcase"></i>
-            <span>Experience</span>
-          </li>
-          <li class="section-item" data-section="projects">
-            <i class="fas fa-folder"></i>
-            <span>Projects</span>
-          </li>
-        </ul>
-      </div>
+      <!-- Main Content -->
+      <main class="main-content">
+          <!-- Sidebar -->
+          <aside class="sidebar">
+              <h2>Sections</h2>
+              <ul class="sections-list">
+                  <li class="section-item active" data-section="personal">
+                      <i class="fas fa-user"></i>
+                      <span>Personal</span>
+                  </li>
+                  <li class="section-item" data-section="description">
+                      <i class="fas fa-align-left"></i>
+                      <span>Description</span>
+                  </li>
+                  <li class="section-item" data-section="education">
+                      <i class="fas fa-graduation-cap"></i>
+                      <span>Education</span>
+                  </li>
+                  <li class="section-item" data-section="skills">
+                      <i class="fas fa-chart-bar"></i>
+                      <span>Skills</span>
+                  </li>
+                  <li class="section-item" data-section="achievements">
+                      <i class="fas fa-trophy"></i>
+                      <span>Achievements</span>
+                  </li>
+                  <li class="section-item" data-section="experience">
+                      <i class="fas fa-briefcase"></i>
+                      <span>Experience</span>
+                  </li>
+                  <li class="section-item" data-section="projects">
+                      <i class="fas fa-project-diagram"></i>
+                      <span>Projects</span>
+                  </li>
+              </ul>
+          </aside>
 
-      <div class="editor">
-        <div class="editor-section" id="personal-section">
-          <div class="section-header">
-            <h2>Personal Information</h2>
-            <button class="btn btn-add"><i class="fas fa-plus"></i> Add Info</button>
-          </div>
-          <div class="form-content">
-            <div class="form-group">
-              <label for="fullname">Full Name</label>
-              <input type="text" id="fullname" placeholder="Name" value="Name">
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="Email" value="emman">
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" placeholder="Phone" value="+123 567 890">
-            </div>
-            <div class="form-group">
-              <label for="location">Location</label>
-              <input type="text" id="location" placeholder="Location" value="New York, USA">
-            </div>
-          </div>
-        </div>
-        
-        <div class="editor-section hidden" id="education-section">
-          <div class="section-header">
-            <h2>Education</h2>
-            <button class="btn btn-add"><i class="fas fa-plus"></i> Add Education</button>
-          </div>
-          <div class="form-content">
-            <div class="form-group">
-              <label for="institution">Institution</label>
-              <input type="text" id="institution" placeholder="Institution name">
-            </div>
-            <div class="form-group">
-              <label for="degree">Degree</label>
-              <input type="text" id="degree" placeholder="Your degree">
-            </div>
-            <div class="form-group">
-              <label for="edu-dates">Dates</label>
-              <input type="text" id="edu-dates" placeholder="2018 - 2022">
-            </div>
-          </div>
-        </div>
-        
-        <div class="editor-section hidden" id="skills-section">
-          <div class="section-header">
-            <h2>Skills</h2>
-            <button class="btn btn-add"><i class="fas fa-plus"></i> Add Skill</button>
-          </div>
-          <div class="form-content">
-            <div class="form-group">
-              <label for="skill-name">Skill Name</label>
-              <input type="text" id="skill-name" placeholder="e.g., JavaScript">
-            </div>
-            <div class="form-group">
-              <label for="proficiency">Proficiency</label>
-              <select id="proficiency">
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
-                <option value="expert">Expert</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        
-        <div class="editor-section hidden" id="achievements-section">
-          <div class="section-header">
-            <h2>Achievements</h2>
-            <button class="btn btn-add"><i class="fas fa-plus"></i> Add Achievement</button>
-          </div>
-          <div class="form-content">
-            <div class="form-group">
-              <label for="achievement-title">Title</label>
-              <input type="text" id="achievement-title" placeholder="Achievement title">
-            </div>
-            <div class="form-group">
-              <label for="achievement-desc">Description</label>
-              <textarea id="achievement-desc" placeholder="Brief description"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="achievement-date">Date</label>
-              <input type="text" id="achievement-date" placeholder="2022">
-            </div>
-          </div>
-        </div>
-        
-        <div class="editor-section hidden" id="experience-section">
-          <div class="section-header">
-            <h2>Experience</h2>
-            <button class="btn btn-add"><i class="fas fa-plus"></i> Add Experience</button>
-          </div>
-          <div class="form-content">
-            <div class="form-group">
-              <label for="company">Company</label>
-              <input type="text" id="company" placeholder="Company name">
-            </div>
-            <div class="form-group">
-              <label for="job-title">Job Title</label>
-              <input type="text" id="job-title" placeholder="Your title">
-            </div>
-            <div class="form-group">
-              <label for="job-dates">Dates</label>
-              <input type="text" id="job-dates" placeholder="Jan 2020 - Present">
-            </div>
-            <div class="form-group">
-              <label for="job-desc">Description</label>
-              <textarea id="job-desc" placeholder="Job description"></textarea>
-            </div>
-          </div>
-        </div>
-        
-        <div class="editor-section hidden" id="projects-section">
-          <div class="section-header">
-            <h2>Projects</h2>
-            <button class="btn btn-add"><i class="fas fa-plus"></i> Add Project</button>
-          </div>
-          <div class="form-content">
-            <div class="form-group">
-              <label for="project-title">Project Title</label>
-              <input type="text" id="project-title" placeholder="Project name">
-            </div>
-            <div class="form-group">
-              <label for="project-desc">Description</label>
-              <textarea id="project-desc" placeholder="Project description"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="project-link">Link</label>
-              <input type="url" id="project-link" placeholder="https://...">
-            </div>
-          </div>
-        </div>
-      </div>
+          <!-- Editor -->
+          <section class="editor">
+              <!-- Personal Information Section -->
+              <div class="editor-section" id="personal-section">
+                  <div class="section-header">
+                      <h2>Personal Information</h2>
+                      <button class="btn btn-add" id="btn-add-info">
+                          <i class="fas fa-plus"></i>
+                          <span>Add Info</span>
+                      </button>
+                  </div>
+                  <div class="form-content">
+                      <div class="form-group">
+                          <label>Profile Image</label>
+                          <div style="display: flex; gap: 1rem; align-items: center;">
+                              <div style="width: 100px; height: 100px; background-color: #f0f0f0; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+                                  <img id="profile-image-preview" style="max-width: 100%; max-height: 100%; display: none;">
+                                  <i class="fas fa-user" id="profile-icon" style="font-size: 2rem; color: #ccc;"></i>
+                              </div>
+                              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                  <button class="btn btn-add" id="btn-upload-image">
+                                      <i class="fas fa-upload"></i>
+                                      <span>Upload Image</span>
+                                  </button>
+                                  <button class="btn btn-icon" id="btn-remove-image">
+                                      <i class="fas fa-trash"></i>
+                                      <span>Remove</span>
+                                  </button>
+                                  <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="full-name">Full Name</label>
+                          <input type="text" id="full-name" placeholder="Enter your full name">
+                      </div>
+                      <div class="form-group">
+                          <label for="email">Email</label>
+                          <input type="email" id="email" placeholder="Enter your email">
+                      </div>
+                      <div class="form-group">
+                          <label for="phone">Phone</label>
+                          <input type="tel" id="phone" placeholder="Enter your phone number">
+                      </div>
+                      <div class="form-group">
+                          <label for="location">Location</label>
+                          <input type="text" id="location" placeholder="City, State, Country">
+                      </div>
+                  </div>
+              </div>
 
-      <div class="preview">
-        <h2>Resume Preview</h2>
-        <div class="preview-container">
-          <div class="preview-placeholder">Preview</div>
-        </div>
-        <button class="btn btn-full-width">
-          <i class="fas fa-eye"></i> View Full Preview
-        </button>
-      </div>
-    </main>
+              <!-- Description Section -->
+              <div class="editor-section hidden" id="description-section">
+                  <div class="section-header">
+                      <h2>Description</h2>
+                      <button class="btn btn-add" id="btn-add-description">
+                          <i class="fas fa-plus"></i>
+                          <span>Add Description</span>
+                      </button>
+                  </div>
+                  <div class="form-content">
+                      <div class="form-group">
+                          <label for="description-type">Type</label>
+                          <select id="description-type">
+                              <option value="professional">Professional Summary</option>
+                              <option value="career">Career Objective</option>
+                              <option value="about">About Me</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="description-content">Content</label>
+                          <textarea id="description-content" placeholder="Write your description here..."></textarea>
+                      </div>
+                  </div>
+              </div>
 
-    <footer class="footer">
-      <div class="copyright">
-        <p>&copy; 2025 E-Portfolio Builder. All rights reserved.</p>
-      </div>
-      <div class="footer-links">
-        <a href="#" class="footer-link"><i class="fas fa-question-circle"></i> Help</a>
-        <a href="#" class="footer-link"><i class="fas fa-envelope"></i> Contact</a>
-      </div>
-    </footer>
+              <!-- Education Section -->
+              <div class="editor-section hidden" id="education-section">
+                  <div class="section-header">
+                      <h2>Education</h2>
+                      <button class="btn btn-add" id="btn-add-education">
+                          <i class="fas fa-plus"></i>
+                          <span>Add Education</span>
+                      </button>
+                  </div>
+                  <div class="form-content">
+                      <div class="form-group">
+                          <label for="institution">Institution</label>
+                          <input type="text" id="institution" placeholder="Enter school or university name">
+                      </div>
+                      <div class="form-group">
+                          <label for="degree">Degree</label>
+                          <input type="text" id="degree" placeholder="Enter your degree or field of study">
+                      </div>
+                      <div class="form-group">
+                          <label for="education-dates">Dates</label>
+                          <input type="text" id="education-dates" placeholder="e.g., 2018 - 2022">
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Skills Section -->
+              <div class="editor-section hidden" id="skills-section">
+                  <div class="section-header">
+                      <h2>Skills</h2>
+                      <button class="btn btn-add" id="btn-add-skill">
+                          <i class="fas fa-plus"></i>
+                          <span>Add Skill</span>
+                      </button>
+                  </div>
+                  <div class="form-content">
+                      <div class="form-group">
+                          <label for="skill-name">Skill Name</label>
+                          <input type="text" id="skill-name" placeholder="Enter a skill">
+                      </div>
+                      <div class="form-group">
+                          <label for="skill-proficiency">Proficiency</label>
+                          <select id="skill-proficiency">
+                              <option value="beginner">Beginner</option>
+                              <option value="intermediate">Intermediate</option>
+                              <option value="advanced">Advanced</option>
+                              <option value="expert">Expert</option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Achievements Section -->
+              <div class="editor-section hidden" id="achievements-section">
+                  <div class="section-header">
+                      <h2>Achievements</h2>
+                      <button class="btn btn-add" id="btn-add-achievement">
+                          <i class="fas fa-plus"></i>
+                          <span>Add Achievement</span>
+                      </button>
+                  </div>
+                  <div class="form-content">
+                      <div class="form-group">
+                          <label for="achievement-title">Title</label>
+                          <input type="text" id="achievement-title" placeholder="Enter achievement title">
+                      </div>
+                      <div class="form-group">
+                          <label for="achievement-description">Description</label>
+                          <textarea id="achievement-description" placeholder="Describe your achievement..."></textarea>
+                      </div>
+                      <div class="form-group">
+                          <label for="achievement-date">Date</label>
+                          <input type="text" id="achievement-date" placeholder="e.g., June 2022">
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Experience Section -->
+              <div class="editor-section hidden" id="experience-section">
+                  <div class="section-header">
+                      <h2>Experience</h2>
+                      <button class="btn btn-add" id="btn-add-experience">
+                          <i class="fas fa-plus"></i>
+                          <span>Add Experience</span>
+                      </button>
+                  </div>
+                  <div class="form-content">
+                      <div class="form-group">
+                          <label for="company">Company</label>
+                          <input type="text" id="company" placeholder="Enter company name">
+                      </div>
+                      <div class="form-group">
+                          <label for="job-title">Job Title</label>
+                          <input type="text" id="job-title" placeholder="Enter your position">
+                      </div>
+                      <div class="form-group">
+                          <label for="experience-dates">Dates</label>
+                          <input type="text" id="experience-dates" placeholder="e.g., Jan 2020 - Present">
+                      </div>
+                      <div class="form-group">
+                          <label for="job-description">Description</label>
+                          <textarea id="job-description" placeholder="Describe your responsibilities and achievements..."></textarea>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Projects Section -->
+              <div class="editor-section hidden" id="projects-section">
+                  <div class="section-header">
+                      <h2>Projects</h2>
+                      <button class="btn btn-add" id="btn-add-project">
+                          <i class="fas fa-plus"></i>
+                          <span>Add Project</span>
+                      </button>
+                  </div>
+                  <div class="form-content">
+                      <div class="form-group">
+                          <label for="project-title">Project Title</label>
+                          <input type="text" id="project-title" placeholder="Enter project name">
+                      </div>
+                      <div class="form-group">
+                          <label for="project-description">Description</label>
+                          <textarea id="project-description" placeholder="Describe your project..."></textarea>
+                      </div>
+                      <div class="form-group">
+                          <label for="project-link">Link</label>
+                          <input type="url" id="project-link" placeholder="Project URL (optional)">
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <!-- Preview -->
+          <aside class="preview">
+              <div class="section-header">
+                  <h2>Resume Preview</h2>
+                  <button class="btn btn-icon" id="btn-preview">
+                      <i class="fas fa-eye"></i>
+                      <span>Preview</span>
+                  </button>
+              </div>
+              <div class="preview-container">
+                  <div class="resume-preview" id="resume-preview">
+                      <div class="resume-header">
+                          <div class="profile-img">
+                              <img id="preview-profile-image" style="display: none;">
+                              <i class="fas fa-user" id="preview-profile-icon" style="font-size: 2rem; color: #ccc; display: flex; width: 100%; height: 100%; align-items: center; justify-content: center;"></i>
+                          </div>
+                          <div class="name-title">
+                              <h1 id="preview-name">Your Name</h1>
+                              <p id="preview-title">Your title</p>
+                              <div class="contact-info">
+                                  <p id="preview-email">email@example.com</p>
+                                  <p id="preview-phone">63+ </p>
+                                  <p id="preview-location">City, State, Country</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="resume-section" id="preview-description-section">
+                          <h2>Profile</h2>
+                          <p id="preview-description">Dedicated professional with experience in the field. A brief description of your skills and career objectives will appear here.</p>
+                      </div>
+                      <div class="resume-section" id="preview-experience-section">
+                          <h2>Employment History</h2>
+                          <div id="preview-experience-list">
+                              <p>Your work experience will appear here.</p>
+                          </div>
+                      </div>
+                      <div class="resume-section" id="preview-education-section">
+                          <h2>Education</h2>
+                          <div id="preview-education-list">
+                              <p>Your education background will appear here.</p>
+                          </div>
+                      </div>
+                      <div class="resume-section" id="preview-skills-section">
+                          <h2>Skills</h2>
+                          <div id="preview-skills-list">
+                              <p>Your skills will appear here.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <button class="btn btn-full-width" id="btn-full-preview">
+                  <i class="fas fa-expand"></i>
+                  <span>View Full Preview</span>
+              </button>
+          </aside>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+          <div class="copyright">
+              © 2025 E-Portfolio Builder. All rights reserved.
+          </div>
+          <div class="footer-links">
+              <a href="#" class="footer-link">
+                  <i class="fas fa-question-circle"></i>
+                  <span>Help</span>
+              </a>
+              <a href="#" class="footer-link">
+                  <i class="fas fa-envelope"></i>
+                  <span>Contact</span>
+              </a>
+          </div>
+      </footer>
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Get all section items in the sidebar
-      const sectionItems = document.querySelectorAll('.section-item');
-      
-      // Add click event listener to each section item
-      sectionItems.forEach(item => {
-        item.addEventListener('click', function() {
-          // Remove 'active' class from all section items
-          sectionItems.forEach(i => i.classList.remove('active'));
-          
-          // Add 'active' class to the clicked section item
-          this.classList.add('active');
-          
-          // Get the section data attribute
-          const section = this.getAttribute('data-section');
-          
-          // Hide all editor sections
-          const editorSections = document.querySelectorAll('.editor-section');
-          editorSections.forEach(section => section.classList.add('hidden'));
-          
-          // Show the selected editor section
-          const selectedSection = document.getElementById(`${section}-section`);
-          if (selectedSection) {
-            selectedSection.classList.remove('hidden');
-          }
-        });
-      });
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
