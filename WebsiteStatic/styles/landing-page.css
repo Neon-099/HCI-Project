@@ -665,24 +665,51 @@
       padding: 0.75rem 1rem;
     }
 
-    /* Adjust hero padding or other sections if needed for mobile */
+    /* Update hero section for mobile */
     .hero-container {
-      flex-direction: column;
+      grid-template-columns: 1fr;
+      gap: 2rem;
       text-align: center;
     }
+    
     .hero-content {
-      margin-bottom: 2rem;
+      max-width: 100%;
+      margin: 0 auto;
     }
+    
+    .hero-image {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    
     .hero-buttons {
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .hero-buttons .btn {
+      width: 100%;
+      max-width: 250px;
     }
 
+    /* Update How It Works section for mobile */
+    .steps {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .step {
+      width: 100%;
+    }
+
+    /* Existing mobile styles */
     .features-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
     .templates-grid {
-        grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
     }
 
     .footer-grid {
