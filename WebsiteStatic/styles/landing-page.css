@@ -92,6 +92,9 @@
     font-size: 1rem;
     transition: all 0.3s ease;
     cursor: pointer;
+    min-width: 200px;
+    text-align: center;
+    justify-content: center;
   }
   
   .btn-primary {
