@@ -19,15 +19,22 @@
           <h2>E-Resume Builder</h2>
         </div>
       </a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#templates">Templates</a></li>
-        </ul>
-      </nav>
-      <div class="auth-buttons">
-        <a href="login.html" class="btn btn-secondary">Log In</a>
-        <a href="signup.html" class="btn btn-primary">Sign Up Free</a>
+      <!-- Hamburger Menu Icon (Visible on Mobile) -->
+      <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Navigation and Auth Buttons Wrapper -->
+      <div class="nav-wrapper">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#templates">Templates</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons">
+          <a href="login.html" class="btn btn-secondary">Log In</a>
+          <a href="signup.html" class="btn btn-primary">Sign Up Free</a>
+        </div>
       </div>
     </div>
   </header>
@@ -137,21 +144,21 @@
       <div class="templates-grid">
         <div class="template-card">
           <div class="template-image">
-            <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Minimal Template">
+            <img src="https://cdn-blog.novoresume.com/articles/minimalistic-resume-templates/minimalistic-resume-examples-03.webp" alt="Minimal Template">
           </div>
           <h3>Minimal</h3>
           <p>Clean and simple design focusing on content.</p>
         </div>
         <div class="template-card">
           <div class="template-image">
-            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Modern Template">
+            <img src="https://marketplace.canva.com/EAFGTvvkUdo/1/0/1131w/canva-grey-white-modern-graphic-designer-resume-2joEmdrOsls.jpg" alt="Modern Template">
           </div>
           <h3>Modern</h3>
           <p>Contemporary design with creative layout.</p>
         </div>
         <div class="template-card">
           <div class="template-image">
-            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Professional Template">
+            <img src="https://marketplace.canva.com/EAFszEvkM50/2/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg" alt="Professional Template">
           </div>
           <h3>Professional</h3>
           <p>Traditional structure ideal for corporate roles.</p>
@@ -205,7 +212,17 @@
   </footer>
 
   <script>
-    
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navWrapper = document.querySelector('.nav-wrapper');
+
+    hamburger.addEventListener('click', () => {
+      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !isExpanded);
+      navWrapper.classList.toggle('active');
+      // Optional: Change icon based on state
+      hamburger.querySelector('i').classList.toggle('fa-bars');
+      hamburger.querySelector('i').classList.toggle('fa-times');
+    });
   </script>
 </body>
 </html>
