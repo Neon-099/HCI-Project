@@ -14,7 +14,7 @@
   
   .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     padding: 0 1.5rem;
   }
   
@@ -177,6 +177,7 @@
   
   .main-nav a {
     font-weight: 500;
+    margin-right: 50px;
     color: #4a5568;
     transition: color 0.3s ease;
   }
@@ -346,14 +347,19 @@
     padding: 6rem 0;
   }
   
+ 
+
   .templates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2.5rem;
     margin-bottom: 3rem;
   }
   
   .template-card {
+    flex: 0 0 auto;
+    width: 350px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -394,128 +400,7 @@
   .templates-cta {
     text-align: center;
   }
-  
-  .author-avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  
-  .author-info h4 {
-    margin-bottom: 0.25rem;
-  }
-  
-  .author-info p {
-    font-size: 0.875rem;
-    color: #718096;
-    margin-bottom: 0;
-  }
-  
-  /* Pricing Section */
-  .pricing {
-    padding: 6rem 0;
-  }
-  
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2.5rem;
-  }
-  
-  .pricing-card {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    position: relative;
-  }
-  
-  .pricing-card.featured {
-    transform: scale(1.05);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    border: 1px solid #3182ce;
-  }
-  
-  .pricing-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background-color: #3182ce;
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
-  
-  .pricing-header {
-    padding: 2rem;
-    text-align: center;
-    border-bottom: 1px solid #e2e8f0;
-  }
-  
-  .price {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #1a202c;
-    margin: 1rem 0;
-  }
-  
-  .price span {
-    font-size: 1.125rem;
-    font-weight: 500;
-    color: #718096;
-  }
-  
-  .pricing-header p {
-    color: #718096;
-    margin-bottom: 0;
-  }
-  
-  .pricing-features {
-    padding: 2rem;
-  }
-  
-  .pricing-features li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-    color: #4a5568;
-  }
-  
-  .pricing-features li i {
-    color: #3182ce;
-  }
-  
-  .pricing-action {
-    padding: 0 2rem 2rem;
-  }
-  
-  /* CTA Section */
-  .cta {
-    padding: 6rem 0;
-    background-color: #1a202c;
-    color: white;
-  }
-  
-  .cta-content {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .cta h2 {
-    color: white;
-    margin-bottom: 1.5rem;
-  }
-  
-  .cta p {
-    color: #e2e8f0;
-    margin-bottom: 2rem;
-  }
-  
+ 
   /* Footer */
   .footer {
     padding: 6rem 0 2rem;
@@ -627,6 +512,14 @@
       align-items: stretch; /* Make items full width */
       border-top: 1px solid #e2e8f0;
       z-index: 105; /* Ensure menu is above content below */
+    }
+
+    .main-nav ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1.5rem; /* Space between nav and buttons */
+      text-align: center;
     }
 
     /* Show the menu when active */
