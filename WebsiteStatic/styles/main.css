@@ -45,7 +45,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 1rem 1.5rem;
   border-bottom: 1px solid #e1e4e8;
 }
 
@@ -73,12 +73,6 @@ h2 {
   font-size: 0.7rem;
   color: #666;
 }
-
-.main-nav{
-  margin-left: 20px;
-  
-}
-
 
 /* Buttons */
 .btn {
@@ -137,7 +131,14 @@ h2 {
   margin-top: 1rem;
 }
 
-
+/* Main Content */
+.main-content {
+  display: grid;
+  grid-template-columns: 250px 1fr 300px;
+  gap: 1rem;
+  padding: 1rem;
+  flex-grow: 1;
+}
 
 /* Sidebar */
 .sidebar {
@@ -147,10 +148,13 @@ h2 {
   border: 1px solid #e1e4e8;
   height: fit-content;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
 }
 
 .sections-list {
   list-style: none;
+  margin-bottom: 1rem;
 }
 
 .section-item {
@@ -255,7 +259,7 @@ h2 {
 /* Footer */
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 1rem 1.5rem;
   border-top: 1px solid #e1e4e8;
@@ -373,4 +377,15 @@ h2 {
   .btn i {
       font-size: 0.8rem;
   }
+}
+
+.btn-change-template {
+  margin-top: auto;
+  width: 100%;
+  justify-content: center;
+  background-color: #4a5568;
+}
+
+.btn-change-template:hover {
+  background-color: #2d3748;
 }
