@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Templates - E-Resume Builder</title>
+  <link rel="stylesheet" href="styles/landing-page.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .templates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+
+    .template-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .template-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .template-preview {
+      position: relative;
+      padding-top: 141.4%; /* A4 aspect ratio */
+      overflow: hidden;
+    }
+
+    .template-preview img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .template-info {
+      padding: 1.5rem;
+    }
+
+    .template-info h3 {
+      margin: 0 0 0.5rem 0;
+      color: #1a202c;
+    }
+
+    .template-info p {
+      color: #4a5568;
+      margin: 0;
+    }
+
+    .use-template-btn {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      background: #1a202c;
+      color: white;
+      text-align: center;
+      border-radius: 4px;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .use-template-btn:hover {
+      background: #2d3748;
+    }
+
+    .back-to-templates {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      color: #4a5568;
+    }
+
+    .back-to-templates:hover {
+      color: #1a202c;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <a href="landing-page.html">
+        <div class="logo">
+          <i class="fas fa-briefcase"></i>
+          <h2>E-Resume Builder</h2>
+        </div>
+      </a>
+      <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="nav-wrapper">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="landing-page.html#features">Features</a></li>
+            <li><a href="landing-page.html#templates">Templates</a></li>
+          </ul>
+        </nav>
+        
+        <div class="auth-buttons">
+          <a href="login.html" class="btn btn-secondary">Log In</a>
+          <a href="signup.html" class="btn btn-primary">Sign Up Free</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="landing-page.html#templates" class="back-to-templates">
+      <i class="fas fa-arrow-left"></i>
+      Back to All Templates
+    </a>
+
+    <div class="section-header">
+      <h2>Minimal Templates</h2>
+      <p>Clean, professional, and distraction-free designs that highlight your content</p>
+    </div>
+
+    <div class="templates-grid">
+      <!-- Template 1 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://cdn.enhancv.com/single_minimalist_page_resume_template_1_d1c7925314.png" alt="Minimal Template 1">
+        </div>
+        <div class="template-info">
+          <h3>Classic Minimal</h3>
+          <p>Timeless design with perfect spacing</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 2 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAGQ-IIGNa0/1/0/1131w/canva-modern-professional-cv-resume-RZAonb9ZjgE.jpg" alt="Minimal Template 2">
+        </div>
+        <div class="template-info">
+          <h3>Modern Minimal</h3>
+          <p>Contemporary layout with subtle accents</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 3 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://cdn-blog.novoresume.com/articles/minimalistic-resume-templates/minimalistic-resume-examples-03.webp" alt="Minimal Template 3">
+        </div>
+        <div class="template-info">
+          <h3>Elegant Minimal</h3>
+          <p>Sophisticated design with refined typography</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 4 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAFJ2vcWX2c/1/0/1131w/canva-minimalist-white-and-grey-professional-resume-osicIupI94A.jpg" alt="Minimal Template 4">
+        </div>
+        <div class="template-info">
+          <h3>Professional Minimal</h3>
+          <p>Corporate-friendly layout with clear hierarchy</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 5 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAFC-9sdKHg/2/0/1131w/canva-black-and-white-minimalist-simple-design-freelancer-resume-wIpoHMlKB6I.jpg" alt="Minimal Template 5">
+        </div>
+        <div class="template-info">
+          <h3>Creative Minimal</h3>
+          <p>Subtle design elements for creative professionals</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 6 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnu7UduNlvBhjLLcVGV4KxlrNYG_u_pWmSWg&s" alt="Minimal Template 6">
+        </div>
+        <div class="template-info">
+          <h3>Tech Minimal</h3>
+          <p>Clean design optimized for tech professionals</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 7 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGW7vS59cnyO1Jfji_yng0yik0-_Hh6g7TGg&s" alt="Minimal Template 7">
+        </div>
+        <div class="template-info">
+          <h3>Executive Minimal</h3>
+          <p>Premium design for senior professionals</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 8 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAFLsXpTDYw/2/0/1131w/canva-white-clean-minimalist-resume-XuIawq8_JmQ.jpg" alt="Minimal Template 8">
+        </div>
+        <div class="template-info">
+          <h3>Academic Minimal</h3>
+          <p>Scholarly design for academic professionals</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 9 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://cdn-blog.novoresume.com/articles/minimalistic-resume-templates/minimalistic-resume-examples-09.webp" alt="Minimal Template 9">
+        </div>
+        <div class="template-info">
+          <h3>International Minimal</h3>
+          <p>Global-friendly design with universal appeal</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 10 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://cdn-blog.novoresume.com/articles/minimalistic-resume-templates/minimalistic-resume-examples-10.webp" alt="Minimal Template 10">
+        </div>
+        <div class="template-info">
+          <h3>Fresh Minimal</h3>
+          <p>Modern take on minimal design</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-branding">
+          <div class="logo">
+            <i class="fas fa-briefcase"></i>
+            <h3>E-Resume Builder</h3>
+          </div>
+          <p>Create a professional resume in minutes, not hours.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Templates</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Resume Builder. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navWrapper = document.querySelector('.nav-wrapper');
+
+    hamburger.addEventListener('click', () => {
+      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !isExpanded);
+      navWrapper.classList.toggle('active');
+      hamburger.querySelector('i').classList.toggle('fa-bars');
+      hamburger.querySelector('i').classList.toggle('fa-times');
+    });
+  </script>
+</body>
+</html> 

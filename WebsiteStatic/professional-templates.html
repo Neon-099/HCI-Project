@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Templates - E-Resume Builder</title>
+  <link rel="stylesheet" href="styles/landing-page.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .templates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+
+    .template-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .template-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .template-preview {
+      position: relative;
+      padding-top: 141.4%; /* A4 aspect ratio */
+      overflow: hidden;
+    }
+
+    .template-preview img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .template-info {
+      padding: 1.5rem;
+    }
+
+    .template-info h3 {
+      margin: 0 0 0.5rem 0;
+      color: #1a202c;
+    }
+
+    .template-info p {
+      color: #4a5568;
+      margin: 0;
+    }
+
+    .use-template-btn {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      background: #1a202c;
+      color: white;
+      text-align: center;
+      border-radius: 4px;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .use-template-btn:hover {
+      background: #2d3748;
+    }
+
+    .back-to-templates {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      color: #4a5568;
+    }
+
+    .back-to-templates:hover {
+      color: #1a202c;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <a href="landing-page.html">
+        <div class="logo">
+          <i class="fas fa-briefcase"></i>
+          <h2>E-Resume Builder</h2>
+        </div>
+      </a>
+      <button class="hamburger-menu" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="nav-wrapper">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="landing-page.html#features">Features</a></li>
+            <li><a href="landing-page.html#templates">Templates</a></li>
+          </ul>
+        </nav>
+        
+        <div class="auth-buttons">
+          <a href="login.html" class="btn btn-secondary">Log In</a>
+          <a href="signup.html" class="btn btn-primary">Sign Up Free</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="landing-page.html#templates" class="back-to-templates">
+      <i class="fas fa-arrow-left"></i>
+      Back to All Templates
+    </a>
+
+    <div class="section-header">
+      <h2>Professional Templates</h2>
+      <p>Traditional and corporate-friendly designs that showcase your experience and expertise</p>
+    </div>
+
+    <div class="templates-grid">
+      <!-- Template 1 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAFszEvkM50/2/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg" alt="Professional Template 1">
+        </div>
+        <div class="template-info">
+          <h3>Corporate Classic</h3>
+          <p>Traditional layout perfect for corporate roles</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 2 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAFszEvkM50/1/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg" alt="Professional Template 2">
+        </div>
+        <div class="template-info">
+          <h3>Executive Pro</h3>
+          <p>Premium design for senior management roles</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 3 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAFszEvkM50/3/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg" alt="Professional Template 3">
+        </div>
+        <div class="template-info">
+          <h3>Business Standard</h3>
+          <p>Versatile design for all business professionals</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 4 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAFszEvkM50/4/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg" alt="Professional Template 4">
+        </div>
+        <div class="template-info">
+          <h3>Finance Pro</h3>
+          <p>Structured layout ideal for finance professionals</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 5 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAFszEvkM50/5/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg" alt="Professional Template 5">
+        </div>
+        <div class="template-info">
+          <h3>Legal Professional</h3>
+          <p>Formal design for legal and compliance roles</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 6 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAFszEvkM50/6/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg" alt="Professional Template 6">
+        </div>
+        <div class="template-info">
+          <h3>Healthcare Pro</h3>
+          <p>Structured layout for healthcare professionals</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 7 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAFszEvkM50/7/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg" alt="Professional Template 7">
+        </div>
+        <div class="template-info">
+          <h3>Education Pro</h3>
+          <p>Academic-friendly design for educators</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 8 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAFszEvkM50/8/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg" alt="Professional Template 8">
+        </div>
+        <div class="template-info">
+          <h3>Sales Professional</h3>
+          <p>Results-focused layout for sales roles</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 9 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAFszEvkM50/9/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg" alt="Professional Template 9">
+        </div>
+        <div class="template-info">
+          <h3>Project Manager</h3>
+          <p>Structured layout for project management roles</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <!-- Template 10 -->
+      <div class="template-card">
+        <div class="template-preview">
+          <img src="https://marketplace.canva.com/EAFszEvkM50/10/0/1131w/canva-simple-professional-cv-resume-36p5VOFVDxY.jpg" alt="Professional Template 10">
+        </div>
+        <div class="template-info">
+          <h3>Consultant Pro</h3>
+          <p>Professional layout for consulting roles</p>
+          <a href="main.html" class="use-template-btn">Use This Template</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-branding">
+          <div class="logo">
+            <i class="fas fa-briefcase"></i>
+            <h3>E-Resume Builder</h3>
+          </div>
+          <p>Create a professional resume in minutes, not hours.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Templates</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Resume Builder. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navWrapper = document.querySelector('.nav-wrapper');
+
+    hamburger.addEventListener('click', () => {
+      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !isExpanded);
+      navWrapper.classList.toggle('active');
+      hamburger.querySelector('i').classList.toggle('fa-bars');
+      hamburger.querySelector('i').classList.toggle('fa-times');
+    });
+  </script>
+</body>
+</html> 
